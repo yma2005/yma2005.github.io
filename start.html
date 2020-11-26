@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body style="background: url(images/2.jpg); background-repeat: no-repeat; background-size: cover;">
+	<p id="idName" style="font-weight: bold; font-size: 24px; text-align: right; color: white;"></p>
+	<img id="helloImg" src="images/1757c2b295ac98c-removebg.png" alt=""  style="position: absolute; width: 20%; top: 220px; left: 18%; z-index: 1;">
+
+	<div id="hello" style="background: rgba(255, 228, 181, .8); border-radius: 8px; margin: 0 auto; width: 40%; box-shadow: 15px -10px 10px rgba(0,0,0,0.5); padding: 5px; position: relative; margin-top: 300px;">
+		<p style="text-align: center;">Приветствую, искатель сокровищь! Как тебя зовут?</p> <input id="name" type="text" value="" style="margin-left: 150px;" onkeyup="return nikName(this);" onchange="return nikName(this);"> <button id="helloB" style="border-radius: border-radius: 50px 0 0 50px; background: ##FFDAB9;">Enter</button>
+	</div>
+
+	<div id="errorstavka" style="background: rgba(255, 228, 181, .8); border-radius: 8px; margin: 0 auto; width: 40%; box-shadow: 15px -10px 10px rgba(0,0,0,0.5); padding: 5px; position: absolute; margin-top: 300px; display: none; z-index: 3; left: 30%;">
+		<p style="text-align: center;">Введите ставку</p> <button id="errorBut" style="border-radius: border-radius: 50px 0 0 50px; background: ##FFDAB9; margin-left: 90%;">Ok</button>
+	</div>
+
+		<div id="errorschet" style="background: rgba(255, 228, 181, .8); border-radius: 8px; margin: 0 auto; width: 40%; box-shadow: 15px -10px 10px rgba(0,0,0,0.5); padding: 5px; position: absolute; margin-top: 300px; display: none; z-index: 2; left: 30%;">
+		<p style="text-align: center;">Поплните счет</p> <button id="errorSchet" style="border-radius: border-radius: 50px 0 0 50px; background: ##FFDAB9; margin-left: 90%;">Ok</button>
+	    </div>
+
+	<div id="table" style="float: left; width: 35%; display: none;">
+	<table style="width: 90%; height: 500px;" border="0">
+		<thead style="color: red; font-weight: bold; background: rgba(255, 140, 0, .8); border-radius: 8px;">
+			<tr>
+				<td>Комбинация</td>
+				<td> Описание</td>
+				<td>Выигрышь</td>
+			</tr>
+		</thead>
+		<tbody style="color: yellow; font-weight: bold; background: rgba(138, 43, 226, .8); border-radius: 8px; text-align: center; border-collapse: collapse;">
+		<tr>
+				<td style="width: 35%;"><img style="width: 25%;" src="images/_1284-18789-removebg.png" alt=""><img style="width: 25%;" src="images/_1284-18789-removebg.png" alt=""><img style="width: 25%;" src="images/_1284-18789-removebg.png" alt=""></td>
+				<td style="width: 40%;"> Три емчуини</td>
+				<td style="width: 20%;">800х1</td>
+			</tr>
+			<tr>
+				<td style="width: 35%;"><img style="width: 25%;" src="images/855ae251feb9056b62bd9a431f4de532-removebg.png" alt=""><img style="width: 25%;" src="images/855ae251feb9056b62bd9a431f4de532-removebg.png" alt=""><img style="width: 25%;" src="images/855ae251feb9056b62bd9a431f4de532-removebg.png" alt=""></td>
+				<td style="width: 40%;"> Три акулы</td>
+				<td style="width: 20%;">200х1</td>
+			</tr>
+			<tr>
+				<td style="width: 35%;"><img style="width: 25%;" src="images/загружено-removebg.png" alt=""><img style="width: 25%;" src="images/загружено-removebg.png" alt=""><img style="width: 25%;" src="images/загружено-removebg.png" alt=""></td>
+				<td style="width: 40%;"> Три осьминога</td>
+				<td style="width: 20%;">80х1</td>
+			</tr>
+			<tr>
+				<td style="width: 35%;"><img style="width: 25%;" src="images/загружено__1_-removebg.png" alt=""><img style="width: 25%;" src="images/загружено__1_-removebg.png" alt=""><img style="width: 25%;" src="images/загружено__1_-removebg.png" alt=""></td>
+				<td style="width: 40%;"> Три рыбы</td>
+				<td style="width: 20%;">40х1</td>
+			</tr>
+			<tr>
+				<td style="width: 35%;"><img style="width: 25%;" src="images/1352943865_1-3-removebg.png" alt=""><img style="width: 25%;" src="images/1352943865_1-3-removebg.png" alt=""><img style="width: 25%;" src="images/1352943865_1-3-removebg.png" alt=""></td>
+				<td style="width: 40%;"> Три ракушки</td>
+				<td style="width: 20%;">20х1</td>
+			</tr>
+			<tr>
+				<td style="width: 35%;"><img style="width: 25%;" src="images/monetka-removebg.png" alt=""><img style="width: 25%;" src="images/starfish-yellow-removebg.png" alt=""><img style="width: 25%;" src="images/starfish-yellow-removebg.png" alt=""></td>
+				<td style="width: 40%;"> Три звезды либо монетки</td>
+				<td style="width: 20%;">10х1</td>
+			</tr>
+			<tr>
+				<td style="width: 35%;"><!-- <img style="width: 25%;" src="images/53-animals-starfish-1-removebg.png" alt=""> --><img style="width: 25%;" src="images/starfish-yellow-removebg.png" alt=""><img style="width: 25%;" src="images/monetka-removebg.png" alt=""></td>
+				<td style="width: 40%;"> Две звезды либо монетки</td>
+				<td style="width: 20%;">5х1</td>
+			</tr>
+			<tr>
+				<td style="width: 35%;"><!-- <img style="width: 25%;" src="images/53-animals-starfish-1-removebg.png" alt=""><img style="width: 25%;" src="images/53-animals-starfish-1-removebg.png" alt=""> --><img style="width: 25%;" src="images/monetka-removebg.png" alt=""></td>
+				<td style="width: 40%;"> Одна звезда либо монетка</td>
+				<td style="width: 20%;">2х1</td>
+			</tr>
+			</tbody>
+	</table>
+	</div>
+
+	<div id="result" style="display: none; float: right;background: url(images/papyrus-1169678-removebg.png); background-size: cover; width: 25%; height: 500px;">
+
+    <div id="makeSchet" style="display: none; width: 20%; background: rgba(255, 235, 205, .8); position: absolute;	z-index: 1;"><p>Пополнить счет <input id="schetChild" style="width: 40%;" type="text" value="" onkeyup="return proverka(this);" onchange="return proverka(this);"><button id="enterschet">Enter</button></p></div>
+
+
+		<h3 style="text-align: center; margin-top: 70px; position: relative;">На Вашем счете:</h3>
+		<p style="margin-left: 60%; text-align: center; border-radius: 8px; background:#F4A460; width: 15%; font-weight: bold;" id="schet"><!-- <img src="images/489174b8980cd8e93380e88e03a9b316-removebg.png" style="width: 30%;" alt=""> --> 0</p>
+
+		<button style="background: #F4A460; width: 45%; border-radius: 8px; margin-left: 30%; padding: 5px;" id="stayschet">Пополнить счет <img src="images/monetka-removebg.png" style="width: 10%;" alt=""></button>
+
+		<div id="makeStavka" style="display: none; width: 20%; background: rgba(255, 235, 205, .8); position: absolute;	z-index: 1;"><p>Сделать ставку <input id="stavkaChild" style="width: 40%;" type="text" value="" onkeyup="return proverka(this);" onchange="return proverka(this);"><button id="enterStavka">Enter</button></p></div>
+
+		<h3 style="text-align: center; margin-left: 30%;">На кону:</h3>
+		<!-- <img src="images/489174b8980cd8e93380e88e03a9b316-removebg.png" style="width: 2%;float: left; position: absolute; left: 89%; top: 42%;" alt=""> -->
+		<p style="margin-left: 60%; text-align: center; border-radius: 8px; background:#F4A460; width: 15%; font-weight: bold;" id="kon"> 0</p>
+		<button id="stayStavka" style="background: #F4A460; width: 45%; border-radius: 8px; margin-left: 30%; padding: 5px;">Сделать ставку <img src="images/depositphotos_10030971-stock-illustration-stack-of-gold-coins-removebg.png" style="width: 20%;" alt=""></button>
+		<h3 style="text-align: center; margin-top: 15px;">Общий выигрышь:</h3>
+		<p style="margin-left: 30%; text-align: center; border-radius: 8px; background:#F4A460; width: 15%; font-weight: bold;" id="win">0</p>
+	</div>
+
+
+
+
+    <div id="ruletka" style="background: rgba(0, 0, 0, .5); width: 15%; height: 12%;position: absolute; top: 77%; left: 43%; border-radius: 8px; display: none; padding: 5px; margin-bottom: 15px;">
+    	<img style="width: 25%; padding-left: 22px;" src="images/_1284-18789-removebg.png" alt=""><img style="width: 25%;" src="images/_1284-18789-removebg.png" alt=""><img style="width: 25%;" src="images/_1284-18789-removebg.png" alt=""></div>
+	<button id="rulbut" style="position: absolute; top: 95%; left: 47%; display: none; background: #F4A460;">Попытать удачу</button>
+
+	
+
+
+
+    
+	
+	<script type="text/javascript" src="js/my-script.js"></script>
+
+
+</body>
+</body>
+</html>
